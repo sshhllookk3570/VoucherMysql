@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button
+    onclick="window.location.href = 'http://127.0.0.1:8000/voucher/see/';">
+        VOUCHER
+    </button>
+
+<br><br><br>
+
+
+
+
+<h2>Click here to see vouchers</h2>
+<form action="{% url 'Voucher:show' %}" method="POST">
+{% csrf_token %}
+  <input type="submit" class="btn" value="Click" name="mybtn">
+</form><br><br><br>
+
+
+<h2>Click here to assign vouchers</h2>
+<form action="{% url 'Voucher:assign' %}" >
+{% csrf_token %}
+  <input type="submit" class="btn" value="Click" name="mybtn">
+</form>
+
+
+
+
+    </body>
+</html>
